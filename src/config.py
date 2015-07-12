@@ -29,17 +29,17 @@
     Keep this a secret.
 """
 
-__author__ = 'pete.frisella@gmail.com (Pete Frisella)'
+__author__ = 'pierre@pierrereimertz.com (Pierre Reimertz)'
 
 # OAuth 2.0 Client Settings
 AUTH_CONFIG = {
-    'OAUTH_CLIENT_ID': 'REPLACE THIS WITH YOUR CLIENT ID',
-    'OAUTH_CLIENT_SECRET': 'REPLACE THIS WITH YOUR CLIENT SECRET',
+    'OAUTH_CLIENT_ID': '6197213067-5lm37kt1le5ink13ff5g13m5hltmt78c.apps.googleusercontent.com',
+    'OAUTH_CLIENT_SECRET': 'oOU208HByhVeEgr7qIP6pFpk',
 
     # E.g. Local Dev Env on port 8080: http://localhost:8080
     # E.g. Hosted on App Engine: https://your-application-id.appspot.com
     'OAUTH_REDIRECT_URI': '%s%s' % (
-        'https://REPLACE_THIS_WITH_YOUR_APPLICATION_NAME.appspot.com OR http://localhost:8080',
+        'https://shorten-li.appspot.com',
         '/admin/auth')
 }
 
