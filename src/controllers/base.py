@@ -71,6 +71,7 @@ class BaseHandler(webapp2.RequestHandler):
     self.response.headers['Content-Type'] = 'text/html; charset=UTF-8'
     self.response.headers['Content-Disposition'] = 'inline'
     self.response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+    self.response.headers['Access-Control-Allow-Origin'] = '*'
     template = jinja_environment.get_template(template_name)
     self.response.write(template.render(template_values))
 
@@ -84,6 +85,7 @@ class BaseHandler(webapp2.RequestHandler):
     self.response.headers['Content-Type'] = 'text/csv; charset=UTF-8'
     self.response.headers['Content-Disposition'] = (
         'attachment; filename=query_response.csv')
+    self.response.headers['Access-Control-Allow-Origin'] = '*'
     self.response.set_status(status)
     self.response.write(csv_content)
 
@@ -96,6 +98,7 @@ class BaseHandler(webapp2.RequestHandler):
     """
     self.response.headers['Content-Type'] = 'text/html; charset=UTF-8'
     self.response.headers['Content-Disposition'] = 'inline'
+    self.response.headers['Access-Control-Allow-Origin'] = '*'
     self.response.set_status(status)
     self.response.write(html_content)
 
@@ -111,6 +114,7 @@ class BaseHandler(webapp2.RequestHandler):
     """
     self.response.set_status(status)
     self.response.headers['Content-Disposition'] = 'inline'
+    self.response.headers['Access-Control-Allow-Origin'] = '*'
     if self.request.get('callback'):  # JSONP Support
       self.response.headers['Content-Type'] = (
           'application/javascript; charset=UTF-8')
@@ -130,6 +134,7 @@ class BaseHandler(webapp2.RequestHandler):
     """
     self.response.headers['Content-Type'] = 'text/plain; charset=UTF-8'
     self.response.headers['Content-Disposition'] = 'inline'
+    self.response.headers['Access-Control-Allow-Origin'] = '*'
     self.response.set_status(status)
     self.response.write(text)
 
@@ -144,5 +149,6 @@ class BaseHandler(webapp2.RequestHandler):
                                              'charset=UTF-16LE')
     self.response.headers['Content-Disposition'] = (
         'attachment; filename=query_response.tsv')
+    self.response.headers['Access-Control-Allow-Origin'] = '*'
     self.response.set_status(status)
     self.response.write(tsv_content)

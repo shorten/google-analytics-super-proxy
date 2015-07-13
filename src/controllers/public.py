@@ -49,6 +49,9 @@ class PublicQueryResponseHandler(base.BaseHandler):
     content. If there is an error then the error message will be rendered
     using the default response format.
     """
+
+    self.response.headers.add_header('Access-Control-Allow-Origin', '*')
+
     query_id = self.request.get('id')
     response_format = str(self.request.get('format', co.DEFAULT_FORMAT))
 
