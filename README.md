@@ -1,3 +1,14 @@
+##edit
+added two endpoints
+
+number of users since epoch:
+https://shorten-li.appspot.com/query?id=agxzfnNob3J0ZW4tbGlyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA
+
+number of short urls created since introduction of event(2015-07-13)
+https://shorten-li.appspot.com/query?id=agxzfnNob3J0ZW4tbGlyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA
+
+
+
 # Google Analytics superProxy
 
 The Google Analytics superProxy allows you to publicly share your Google
